@@ -12,7 +12,6 @@ export const AddRoom = async (req,res)=>{
             block:req.body.block,
             invName:req.body.invigilator_name,
             time:req.body.timings,
-            invPhoto:req.body.invigilatorPhoto
         }
         const CreatedRoomId = await CreateRoom(roomDetails);
         res.status(201).json("We Added Room Details SuccessFully");

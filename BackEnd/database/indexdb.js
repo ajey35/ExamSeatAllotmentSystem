@@ -1,9 +1,11 @@
 
-import {Pool} from 'pg';
+import pg from 'pg';
 
 import {config} from 'dotenv'
 
 config();
+
+const {Pool } = pg;
 
 export const pool = new Pool({
     host:process.env.HOST,
