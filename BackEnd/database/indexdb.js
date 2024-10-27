@@ -1,19 +1,21 @@
-import {createPool} from 'mysql2/promise'
+
+import {Pool} from 'pg';
 
 import {config} from 'dotenv'
 
 config();
 
-export const pool = createPool({
+export const pool = new Pool({
     host:process.env.HOST,
     user:process.env.USER,
     password:process.env.PASSWORD,
     database:process.env.DATABASE
-});
+})
+
 
 export const connectToDatabase = async () =>{
     try {
-        await pool.getConnection();
+        await pool.connect();
         console.log("Database Connected Successfully!");
         
     } catch (error) {
