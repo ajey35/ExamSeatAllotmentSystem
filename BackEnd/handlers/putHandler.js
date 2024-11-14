@@ -6,6 +6,8 @@ export const UpdateRoom = async (req,res)=>{
         // const{room_name,subject,subject_code,block,invigilator_name,timings,invigilatorPhoto}= req.body;
         const roomDetails = {
             id:req.params.rid,
+            ustart:req.body.usn_start,
+            uend:req.body.usn_end,
             rname:req.body.room_name,
             sub:req.body.subject,
             subcode:req.body.subject_code,

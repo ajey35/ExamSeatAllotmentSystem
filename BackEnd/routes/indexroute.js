@@ -1,23 +1,17 @@
 import { Router } from "express";
 
-import { getRooms,getRoom } from "../handlers/getHandler.js";
+import { getSeat } from "../handlers/getSeat.js";
 
-import { AddRoom } from "../handlers/postHandler.js";
-
-import { UpdateRoom } from "../handlers/putHandler.js";
-
-import { DeleteRoom } from "../handlers/deleteHandler.js";
+import loginHandle from "../handlers/login.js";
 
 const route = Router();
 
-route.get("/",getRooms);
+route.post('/login',loginHandle);
 
-route.get("/:rid",getRoom);
+route.get('/',(req,res)=>{
+    res.status(200).json({msg:"Hello From BackEnd"})
+})
 
-route.post("/AddRoom",AddRoom);
-
-route.put("/UpdateRoom/:rid",UpdateRoom);
-
-route.delete("/DeleteRoom/:rid",DeleteRoom);
+route.post('/getSeat', getSeat);
 
 export default route;

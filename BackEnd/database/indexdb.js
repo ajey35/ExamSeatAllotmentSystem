@@ -7,7 +7,7 @@ config();
 
 const {Pool } = pg;
 
-export const pool = new Pool({
+export const poolEx = new Pool({
     host:process.env.HOST,
     user:process.env.USER,
     password:process.env.PASSWORD,
@@ -15,13 +15,13 @@ export const pool = new Pool({
 })
 
 
-export const connectToDatabase = async () =>{
+export const connectToDatabaseEx = async () =>{
     try {
-        await pool.connect();
-        console.log("Database Connected Successfully!");
+        await poolEx.connect();
+        console.log("Database exam schdule Connected Successfully!");
         
     } catch (error) {
-        console.log("Getting Error While Connecting to DataBase!");
+        console.log("Getting Error While Connecting to DataBase exam schedule!");
         throw error;
     }
 }

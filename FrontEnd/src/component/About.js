@@ -22,7 +22,7 @@ const About = () => {
                     <li>React.js for building the user interface.</li>
                     <li>Tailwind CSS for responsive and modern styling.</li>
                     <li>Node.js and Express for the backend services.</li>
-                    <li>MySQL for data storage and management.</li>
+                    <li>Postgres SQL for data storage and management.</li>
                 </ul>
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">Our Vision</h2>
                 <p className="text-gray-700 mb-4">
